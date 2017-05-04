@@ -9,6 +9,8 @@ const io = require('socket.io')(server)
 //   next()
 // })
 
+app.use(express.static(__dirname + '/public'));
+
 io.on('connection', function(socket){
   console.log('User connected!')
 
